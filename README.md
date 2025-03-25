@@ -31,7 +31,10 @@ On Windows PowerShell:
 ```
 
 #### Install requirements
+```bash
 pip install -r requirements.txt
+```
+
 
 #### Fill out .env variables
 

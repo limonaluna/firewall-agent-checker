@@ -1,14 +1,20 @@
 import os
 from openai import AzureOpenAI
 
+#Load environment variables
+from dotenv import load_dotenv
+load_dotenv()
+
+#instatiate Azure OpenAI client
 client = AzureOpenAI(
   azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT"), 
   api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
-  api_version=os.getenv("API_VERSION")
+  api_version=os.getenv("AZURE_OPENAI_API_VERSION")
 )
 
+#Test connection
 response = client.chat.completions.create(
-    model="gpt-35-turbo", # model = "deployment_name".
+    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"), # model = "deployment_name".
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
