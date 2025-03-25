@@ -35,7 +35,7 @@ On Windows PowerShell:
 pip install -r requirements.txt
 ```
 
-
 #### Fill out .env variables
+Example for .env file is shown in the file "env.example"
 
 
