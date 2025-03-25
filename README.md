@@ -4,17 +4,17 @@
 
 ### Setup
 #### Virtual environment
-1. If you're not already in the folder where you want the environment:
+##### 1. If you're not already in the folder where you want the environment:
 ```bash
 cd /path/to/your/project
 ```
 
-2. Create virtual environment
+##### 2. Create virtual environment
 ```bash
 python -m venv .venv
 ```
 
-3. Activate virtual environment
+##### 3. Activate virtual environment
 On macOS/Linux/WSL:
 ```bash
 source .venv/bin/activate
