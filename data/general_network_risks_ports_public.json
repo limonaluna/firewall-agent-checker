@@ -1,0 +1,167 @@
+[
+ {
+   "risk_id": "R001",
+   "cve_id": "",
+   "description": "Active Users - On some UNIX machines, creating a TCP connection to this port will dump the active processes and who launched them.",
+   "cvss_score": 5,
+   "ports": 11,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R002",
+   "cve_id": "",
+   "description": "FTP Data- Unencrypted file transfer",
+   "cvss_score": 5,
+   "ports": 20,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R003",
+   "cve_id": "",
+   "description": "FTP Control- Unencrypted file transfer",
+   "cvss_score": 5,
+   "ports": 21,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R004",
+   "cve_id": "",
+   "description": "SSH - Brute force risk is exposed",
+   "cvss_score": 7.5,
+   "ports": 22,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R005",
+   "cve_id": "",
+   "description": "Telnet - Unecnrypted, deprecated",
+   "cvss_score": 9,
+   "ports": 23,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R006",
+   "cve_id": "",
+   "description": "SMTP - Often targeted for spam and phishing attacks",
+   "cvss_score": 8,
+   "ports": 25,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R007",
+   "cve_id": "",
+   "description": "DNS - Can be exploited for DNS amplification attacks",
+   "cvss_score": 8,
+   "ports": 53,
+   "protocols": "udp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R008",
+   "cve_id": "",
+   "description": "HTTP - Unecnrypted traffic",
+   "cvss_score": 4,
+   "ports": 80,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R009",
+   "cve_id": "",
+   "description": "POP3 - Like FTP, it transmits data in plain text",
+   "cvss_score": 4,
+   "ports": 110,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R010",
+   "cve_id": "",
+   "description": "IMAP - Another email protocol that transmits data in plain text",
+   "cvss_score": 4,
+   "ports": 143,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R011",
+   "cve_id": "",
+   "description": "SMB - Wormable exploits",
+   "cvss_score": 9,
+   "ports": 445,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R012",
+   "cve_id": "",
+   "description": "RDP - Remote exploit risk",
+   "cvss_score": 8,
+   "ports": 3389,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R013",
+   "cve_id": "",
+   "description": "OpenVPN - VPN misconfig risk",
+   "cvss_score": 6,
+   "ports": 1194,
+   "protocols": "udp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R014",
+   "cve_id": "",
+   "description": "PPTP VPN - Weak encryption",
+   "cvss_score": 7,
+   "ports": 1723,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ },
+ {
+   "risk_id": "R015",
+   "cve_id": "",
+   "description": "HTTP Alt - Often unprotected",
+   "cvss_score": 5,
+   "ports": 8080,
+   "protocols": "tcp",
+   "ip_ranges": "0.0.0.0/0",
+   "source": "Predefined",
+   "last_updated": "03/03/2025"
+ }
+]
