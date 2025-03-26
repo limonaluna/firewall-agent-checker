@@ -2,6 +2,8 @@ openai
 dotenv
 semantic-kernel
 azure-search-documents
+azure-storage-file-datalake
+pandas
 
 azure-ai-projects
 azure-identity
