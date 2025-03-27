@@ -1,5 +1,5 @@
 source_ip,destination_ip,port,protocol,cvss_score,description,recommendation,ai_risk_assessment,confidence_score_percentage
-10.0.0.0/28,20.0.0.0/28,80,TCP,N/A,No associated risks found,Allow this rule,Low Risk,80
-10.0.0.0/28,20.0.0.0/28,8080,TCP,N/A,No associated risks found,Allow this rule,Low Risk,80
-10.0.0.0/28,20.0.0.0/28,3389,TCP,N/A,Port 3389 is commonly used for Remote Desktop Services (RDP) and can attract exploitation attempts.,Monitor this rule,Medium Risk,70
-0.0.0.0/0,10.0.0.10,1433,ICMP,N/A,This rule allows access to or from the entire public internet (0.0.0.0/0), which is highly permissive and should be used with caution. Ensure this exposure is intentional, restricted by additional controls (e.g., authentication, IP whitelisting, segmentation), and regularly reviewed. Consider narrowing the scope to known IP ranges when possible to reduce attack surface.,Block this rule,High Risk,95
+10.0.0.0/28,20.0.0.0/28,80,TCP,N/A,No risky IP range or port information available,Allow this rule,Low Risk,50
+10.0.0.0/28,20.0.0.0/28,8080,TCP,N/A,No risky IP range or port information available,Allow this rule,Low Risk,50
+10.0.0.0/28,20.0.0.0/28,3389,TCP,N/A,The configuration uses port 3389 (RDP) which is commonly targeted for remote access attacks. No explicit risk data found.,Monitor this rule,Medium Risk,75
+0.0.0.0/0,10.0.0.10,1433,ICMP,N/A,This rule allows access to or from the entire public internet (0.0.0.0/0), which is highly permissive and should be used with caution. Ensure this exposure is intentional, restricted by additional controls (e.g., authentication, IP whitelisting, segmentation), and regularly reviewed. Consider narrowing the scope to known IP ranges when possible to reduce attack surface.,Block this rule,High Risk,85
