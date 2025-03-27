@@ -1,0 +1,5 @@
+source_ip,destination_ip,port,protocol,cvss_score,description,recommendation,ai_risk_assessment,confidence_score_percentage
+10.0.0.0/28,20.0.0.0/28,80,TCP,N/A,No known risks associated with this rule,Allow this rule,Low Risk,80
+10.0.0.0/28,20.0.0.0/28,8080,TCP,N/A,No known risks associated with this rule,Allow this rule,Low Risk,80
+10.0.0.0/28,20.0.0.0/28,3389,TCP,N/A,No specific risk indicators found for the Source IP, Destination IP, or Port.,Monitor this rule,80
+0.0.0.0/0,10.0.0.10,1433,ICMP,N/A,This rule allows access to or from the entire public internet (0.0.0.0/0), which is highly permissive and should be used with caution. Ensure this exposure is intentional, restricted by additional controls (e.g., authentication, IP whitelisting, segmentation), and regularly reviewed. Consider narrowing the scope to known IP ranges when possible to reduce attack surface.,Block this rule,High Risk,85
