@@ -1,4 +1,4 @@
-# Firewall-agent-checker
+# Firewall Risk Assessment Assistant
 
 ## Architecture
 ### Overview
