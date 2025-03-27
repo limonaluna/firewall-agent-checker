@@ -5,10 +5,12 @@
 
 
 ## Setup
-### Configure Resources
+For the project to run, you need to setup a few resources on Azure, and also prepare your local environment for it. The following guide walks you through the steps.
+
 Overview on the setup requirements:
 ![Resource configuration](media/resource_config.png)
 
+### Azure Setup
 #### Deploy Azure Resources
 1. Deploy an Azure OpenAI service
 2. Deploy an Azure OpenAI model deployment (e.g. gpt-4o)
@@ -28,18 +30,23 @@ Note: Code already is capable to upload the data directly to storage account. Co
 - Verify the success of the indexing process by querying the index in the portal through the search explorer
 ![AI Search Index configuration](media/ai_search_index_config.png)
 
-### Create virtual environment
-#### 1. If you're not already in the folder where you want the environment:
+#### Retrieve connection information
+- Retrieve all required information regarding endpoints and keys from the Azure resources
+- This will be needed to fill out the .env file
+
+### Local Setup
+#### Create virtual environment
+##### 1. If you're not already in the folder where you want the environment:
 ```bash
 cd /path/to/your/project
 ```
 
-#### 2. Create virtual environment
+##### 2. Create virtual environment
 ```bash
 python -m venv .venv
 ```
 
-#### 3. Activate virtual environment
+##### 3. Activate virtual environment
 On macOS/Linux/WSL:
 ```bash
 source .venv/bin/activate
@@ -55,12 +62,19 @@ On Windows PowerShell:
 .venv\Scripts\Activate.ps1
 ```
 
-### Install requirements
+#### Install requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-### Fill out .env variables
-Example for .env file is shown in the file "env.example"
+#### Fill out .env variables
+- Create .env file (in the root of the repository)
+- Example for .env file is shown in the file "env.example"
+- Fill out all environment variables with the required information
 
-
+## Security remaks
+- The code in this repository is implemented with a PoC mindset - security best practices were not applied
+- If you want to use this code in production, revisit the following issues:
+    - Switch from key-based authentication to identity-based authentication
+    - Implement Azure resources with private networking integration
+    - Do not run Jupyter notebook locally, but run it on Azure
