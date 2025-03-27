@@ -1,7 +1,48 @@
 # Firewall-agent-checker
 
 ## Architecture
+### Overview
+The Firewall Risk Assessment Assistant is an intelligent, natural language-based tool designed to help evaluate the risk level of Azure Firewall rules. It combines Azure OpenAI's function calling with Azure AI Search to deliver accurate, context-aware assessments using the Retrieval-Augmented Generation (RAG) pattern.
 
+### Core Capabilities
+#### Risk Evaluation
+Assesses firewall rules by analyzing source IPs, destination IPs, ports, and protocols. Uses public risk data indexed in Azure AI Search to make informed evaluations.
+
+#### Smart Function Calling
+Automatically selects the right function based on available input:
+- query_risky_ip_ranges(ip_range)
+- query_risky_ports(port, protocol)
+- query_firewall_rule_public_risk(source_ip, destination_ip, port, protocol)
+
+See this illustration for further explanation:
+![Function Calling](media/function_calling.png)
+
+#### Risk Scoring and Classification
+Uses CVSS scores (Common Vulnerability Scoring System) when available:
+- High Risk: ≥ 7.0
+- Medium Risk: 4.0–6.9
+- Low Risk: < 4.0
+- If no CVSS data is found, the assistant applies logical inference based on available evidence.
+
+#### Confidence Score
+Outputs include a confidence score (0–100%) reflecting the completeness and reliability of the underlying data.
+
+#### Recommendations
+For each rule evaluated, one of the following recommendations is given:
+- Block this rule
+- Monitor this rule
+- Allow this rule
+
+#### Output Format
+Results are returned in CSV format, structured as follows:
+
+```csv
+source_ip,destination_ip,port,protocol,cvss_score,description,recommendation,ai_risk_assessment,confidence_score_percentage
+```
+
+- Headers are always included.
+- "N/A" is used where data is not available.
+- Designed for easy integration into reporting pipelines or security dashboards.
 
 
 ## Setup
